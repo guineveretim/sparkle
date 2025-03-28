@@ -1,0 +1,80 @@
+
+
+h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.signup-link,
+.forgot-password {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #777;
+}
+
+.signup-link a,
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link a:hover,
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  color: #777;
+  width: 100%;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+      font-size: 14px;
+  }
+
+  button[type="submit"] {
+      font-size: 14px;
+  }
+
+  .signup-link,
+  .forgot-password {
+      font-size: 12px;
+  }
+}

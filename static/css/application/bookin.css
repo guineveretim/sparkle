@@ -1,0 +1,292 @@
+/* bookin.css */
+
+/* Variables (if using a preprocessor) */
+:root {
+  --primary-color: #E0F7FA;
+  --secondary-color: #B2EBF2;
+  --accent-color: #FFEB3B;
+  --text-color: #333;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--primary-color); /* Example */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.header {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section Styles */
+
+.hero {
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+}
+
+.hero button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: darken(var(--accent-color), 10%); /* Darken on hover (requires a preprocessor function) */
+}
+
+/* Services Section Styles */
+
+.services {
+    padding: 20px;
+}
+
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow:0 0 10px rgb(65, 187, 201);
+    border-radius: 5px;
+}
+.services h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.services-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.services-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.services h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Why Choose Us Section Styles */
+
+.why {
+    padding: 20px;
+}
+
+.why h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.why-item h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.why-item p {
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section Styles */
+
+.testimonials {
+    padding: 20px;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.testimonials-slider {
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+}
+
+/* Contact Section Styles */
+
+.contact {
+    padding: 20px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: darken(var(--accent-color), 10%); /* Darken on hover (requires a preprocessor function) */
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+/* Footer Section Styles */
+
+.footer {
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: #fff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.footer-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-item h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-item p {
+    margin-bottom: 20px;
+}
+
+/* Slider Section Styles */
+
+.slider {
+    padding: 20px;
+}
+
+.slider-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.slide {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.slide p {
+    margin-bottom: 20px;
+}

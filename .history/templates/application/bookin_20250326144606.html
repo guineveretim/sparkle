@@ -1,0 +1,263 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marasparkle</title>
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!--Google fomts-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/application/bookin.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .hero{
+            background-image: url('{% static "images/clean.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff; 
+        }
+        
+        .slide1{
+            background-image: url('{% static "images/clean.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            height: 45vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff; 
+            border-radius: 7px;
+        }
+
+        .slide2{
+            background-image: url('{% static "images/clean.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            height: 45vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff; 
+            border-radius: 7px;
+        }
+
+        .slide3{
+            background-image: url('{% static "images/clean1.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            height: 45vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff; 
+            border-radius: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li class="logo">
+                        <a href="{% url 'home'%}">Home</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#why">Why Choose Us</a>
+                    </li>
+                    <li>
+                        <a href="#testimonials">Testimonials</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Discover Marasparkle</h1>
+                Marasparkle is flexible and offers top notch cleaning services through reliable, efficient and motivated staff.</p>
+            <button class="btn">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>House Cleaning</h3>
+                    <p>Our residential cleaning services are designed to provide a fresh and clean home.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Commercial Cleaning</h3>
+                    <p>Our commercial cleaning services are designed to provide a clean and healthy work environment.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Maintanance</h3>
+                    <p>Our Maintanance services are designed to provide a showroom-quality car.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Maid Placement</h3>
+                    <p> Maid Placement with Marasparkle</p>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why" id="why">
+        <div class="container">
+            <h2>Why Choose Marasparkle</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-Friendly Cleaning</h3>
+                    <p>We use eco-friendly cleaning products that are safe for your family and pets.</p>
+                </div>
+                <div class="why-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Trained Professionals</h3>
+                    <p>Our team is fully trained and insured to ensure your home is cleaned to perfection.</p>
+                </div>
+                <div class="why-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure and Reliable</h3>
+                    <p>We offer secure and reliable cleaning services that you can trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <p>"Marasparkle is the best cleaning service I've ever used. Their team is professional and reliable."</p>
+                    <p>- Jane</p>
+                </div>
+                <div class="testimonial">
+                    <p>"I was blown away by the level of detail Marasparkle provided. Their team is top-notch."</p>
+                    <p>- Timmy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button class="btn">Send Message</button>
+            </form>
+            <div class="social-media">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section class="slider">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="slider-grid">
+                <div class="slide1">
+                    <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </div>
+                <div class="slide2">
+                    <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </div>
+                <div class="slide3">
+                    <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-item">
+                    <h3>Get in Touch</h3>
+                    <p>Phone: +263 786 167 159 </p>
+                    <p>Email: <a href="#" target="_blank">info@marasparkle.com</a></p>
+                </div>
+                <div class="footer-item">
+                    <h3>Follow Us</h3>
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.services-grid').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+            });
+
+            $('.testimonials-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+            });
+        });
+    </script>
+</body>
+</html>

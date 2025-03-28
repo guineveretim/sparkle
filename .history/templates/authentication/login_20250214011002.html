@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/authentication/login.css'%}">
+</head>
+<body>
+    <div class="content">
+    <div class="container">
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="signup-link">
+        To register an account 
+        <a href="{% url 'register' %}">Click here</a>
+    </p>
+
+    <p class="forgot-password">
+        Forgot Password?
+        <a href="{% url 'password_reset' %}">Reset Password</a>
+
+    </p>
+    </div>
+ </div>
+
+<footer>
+
+    <p>&copy; {{2025}} Marasparkle. All rights reserved.</p>
+
+</footer>
+</body>
+</html>

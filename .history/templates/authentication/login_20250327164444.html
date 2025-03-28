@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body{
+            height: 100vh;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgba(128, 0, 32, 0.1);
+            color: #333;
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .login-container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(128, 0, 32, 0);
+            border-radius: 2px;
+            margin: auto;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color:#800020;
+        }
+
+        .message-container {
+            margin-bottom: 15px;
+        }
+
+        .messages {
+            list-style: none;
+            padding: 0;
+        }
+
+        .messages li {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            color: #31708f;
+            background-color: #d9edf7;
+            border: 1px solid #bce8f1;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color:#800020;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            height: 40px;
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #ffffff;  
+            background-color: #333; 
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            background-color: #444; 
+            border-color: #66afe9; 
+            outline: none; 
+        }
+
+        .submit-btn {
+            padding: 10px 15px;
+            background-color:#800020;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px; 
+            width: 100%;
+            margin-top: 10px; 
+        }
+
+        .submit-btn:hover {
+            background-color:rgb(104, 31, 31);
+        }
+
+        .signup-link,
+        .forgot-password {
+            margin-top: 15px;
+            color: black;
+            font-size: 0.9rem;
+        }
+
+        .signup-link a,
+        .forgot-password a {
+            color:#800020;
+            text-decoration: none;
+    
+        }
+        .signup-link a:hover,
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color:#800020;
+            text-align: center;
+        }
+    
+        footer p{
+            margin: 0;
+            color: white;
+             padding: 17px;
+            font-size: 1rem;
+        }
+
+        header{
+            background-color:#800020;
+            height: 6%;
+            padding: 17px;
+           
+        }
+
+        header p{
+            color: white;
+            margin:0;
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 80px; 
+            }
+
+            .submit-btn {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.5rem; 
+            }
+
+            .signup-link,
+            .forgot-password {
+                font-size: 0.75rem; 
+            }
+        
+    </style>
+</head>
+<body>
+<header>
+    <p>ALMA Login</p>
+</header>
+<div class="login-container">
+    <img src="{% static 'images/alma.png' %}" alt="Alma Logo" class="logo">
+    <h2>Login</h2>
+
+    <div class="message-container">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="{{ message.tags }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value="{{ form.username.value|default_if_none:'' }}">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+
+        
+    </form>
+
+    <p class="signup-link">
+        To register an account 
+        <a href="{% url 'register' %}">Click here</a>
+    </p>
+
+    <p class="forgot-password">
+        Forgot Password?
+        <a href="{% url 'password_reset' %}">Reset Password</a>
+
+    </p>
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} ALMA. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>

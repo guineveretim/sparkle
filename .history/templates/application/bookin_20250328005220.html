@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #e3f2fd; /* Light blue background */
+        }
+        .success-icon {
+            font-size: 3rem;
+            color: #007bff; /* Blue color for icon */
+        }
+        .main-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .btn-custom {
+            background-color: #007bff; /* Button color */
+            border-color: #007bff; /* Button border color */
+        }
+        .btn-custom:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3; /* Darker blue border on hover */
+        }
+        .card {
+            background: #f3f9fd; /* Slightly darker light blue for the card */
+            border: 1px solid #007bff; /* Blue border for the card */
+        }
+    </style>
+</head>
+<body>
+    <div class="container main-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="mb-4">
+                    <i class="bi bi-check-circle success-icon"></i>
+                </div>
+                <h1 class="display-4 text-primary">Booking Successful!</h1>
+                <p class="lead text-secondary">Thank you for your booking.</p>
+                <p>Your cleaning service has been successfully scheduled. You will receive a confirmation email shortly with all the details.</p>
+                
+                <hr class="my-4">
+                <h2 class="text-primary">Booking Details:</h2>
+                <div class="card mb-4">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Service Type: <strong>{{ service_type }}</strong></li>
+                        <li class="list-group-item">Date: <strong>{{ booking_date }}</strong></li>
+                        <li class="list-group-item">Time: <strong>{{ booking_time }}</strong></li>
+                        <li class="list-group-item">Customer Name: <strong>{{ customer_name }}</strong></li>
+                        <li class="list-group-item">Contact: <strong>{{ customer_contact }}</strong></li>
+                    </ul>
+                </div>
+                
+                <hr class="my-4">
+                <a href="{% url 'home' %}" class="btn btn-custom">Return to Home</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
