@@ -186,17 +186,17 @@
 <!-- Slide text -->         
 <section class="container-fluid mt-5">
     <div class="row" style="overflow: hidden;">
-        <div class="col-12 mt-5 p-2 align-self-center"
+        <div class="col-lg-8 col-sm-12 mt-5 p-2 align-self-center"
         style="background-image: url('{% static '/images/br.jpg' %}');
         height:100vh; overflow: hidden; background-size: cover;
           background-position: center; position: relative;
-           color: white;  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));"> 
+           color: white; mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));"> 
             <div class="overlay-text">
-                <h2 id="slide-text" style="color: white; white-space: normal;margin-top:300px;">Spark and Glow Your Home With Marasparkle<br><span>Residential Cleaning Services</span></h2>
+                <h2 id="slide-text" style="color: white; white-space: normal;margin-top:200px;">Spark and Glow Your Home With Marasparkle<br><span>Residential Cleaning Services</span></h2>
             </div>
         </div>
 
-        <div class="col-12 sticky-button mt-5  p-5 align-self-center"> 
+        <div class="col-lg-3 sticky-button mt-5 offset-lg-1 p-5 align-self-center"> 
             <div class="btn-box">
                 <div class="bk-btn">
                     <div class="btn-item">
@@ -302,29 +302,39 @@
 <br>
     <!-- Video Section -->
  
-   
-        <div class="container-fluid" 
-        style="background-image: url('{% static 'assets/images/white.jpeg' %}');
-        height:100vh; overflow: hidden; background-size: cover;
-          background-position: center; position: relative;
-           color: white;  margin-bottom: -30px;">
-       
-            <div class="row mt-5">
-                <div class="col-12 mt-5 d-flex justify-content-center ">
-                    <div class="section-heading text-center">
-                        <h5 style="color:rgba(46, 55, 231, 0.9);">Navigate to our facebook page for more Sparkling videos.</h5>
-                        <h2 style="color:rgba(43, 82, 237, 0.9);">Connect with Marasparkle & Live Differently</h2>
-                    </div>
-                   
-                </div>
-                <div class="col-12 mt-5 d-flex justify-content-center">
-                    <div class="video-frame"> 
-                        <a href="https://www.facebook.com/profile.php?id=61573551016908" target="_blank"><i class="fa fa-play fa-3x" style="color:rgba(43, 82, 237, 0.9) ; margin-top:50px;"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="container-fluid" 
+    style="height: 100vh; overflow: hidden; position: relative; margin-bottom: -30px;">
+
+   <!-- Background Layer with mask-image -->
+   <div style="background-image: url('{% static 'assets/images/white.jpeg' %});
+         height: 100%; 
+         width: 100%; 
+         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)); 
+         -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)); 
+         background-size: cover; 
+         background-position: center; 
+         position: absolute; 
+         top: 0; 
+         left: 0; 
+         z-index: 1;">
+   </div>
+
+   <div class="row mt-5" style="position: relative; z-index: 2;">
+       <div class="col-12 mt-5 d-flex justify-content-center">
+           <div class="section-heading text-center">
+               <h5 style="color: rgba(255, 255, 255, 0.9);">Navigate to our facebook page for more Sparkling videos.</h5>
+               <h2 style="color: rgba(255, 255, 255, 0.9);">Connect with Marasparkle & Live Differently</h2>
+           </div>
+       </div>
+       <div class="col-12 mt-5 d-flex justify-content-center">
+           <div class="video-frame"> 
+               <a href="https://www.facebook.com/profile.php?id=61573551016908" target="_blank">
+                   <i class="fa fa-play fa-3x" style="color: rgba(43, 82, 237, 0.9); margin-top: 50px;"></i>
+               </a>
+           </div>
+       </div>
+   </div>
+</div>
   
     <!-- Fun Facts Section -->
     <div class="fun-facts">
@@ -452,7 +462,7 @@
     <!-- Contact Section -->
     <div class="contact section">
         <div class="container-fluid  d-flex justify-content-center align-items-center" style="background-image: url('{% static 'images/dr.jpg' %}');
-        height:100vh; overflow: hidden; background-size: cover; mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));">
+        height:100vh; overflow: hidden; background-size: cover; mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));">
             <div class="row" style="overflow: hidden;">
             <div class="row">
                 <div class="col ">
