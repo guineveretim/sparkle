@@ -1,0 +1,535 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>{% block title %}Marasparkle{% endblock %}</title>
+
+     <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--Google fomts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-villa-agency.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    
+
+    <style>
+        html {
+            overflow-x: hidden; 
+        }
+        body{
+            background-color:rgb(255, 255, 255);
+            overflow-x: hidden;
+    
+          }
+       
+        .carousel-item {
+            background-color:white;"
+        }
+
+        .carousel-item img {
+            max-height: 400px; 
+            object-fit: cover;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+
+            background-color:#2c3f64;
+        }
+        
+        .card-body {
+            background-color:white;"
+        }
+
+        .card-title {
+            color: white;
+        }
+
+        .text-center {
+            margin-bottom: 20px;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- ***** Header Area Start ***** -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color:rgba(118, 106, 106, 0.3);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'services_details' %}">
+                <img src="{% static 'icons/Maralog.png' %}" style="width:70px;" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color:white;"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}" style="color:#2c3f64;">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'services_details' %}" style="color:#2c3f64;">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}" style="color:#2c3f64;">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}" style="color:#2c3f64;">
+                            <i class="fas fa-calendar" style="background-color:#2c3f64;"></i>BookNow
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ***** Header Area End ***** -->
+
+<div class="container-fluid" style="background-image: url('{% static 'images/sofas.jpg' %}');
+        height:100vh; overflow: hidden; background-size: cover;
+          background-position: center; position: relative;
+           color: white;  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));">
+    <div class="row">
+        <div class="col-lg-12 text-center mt-5">
+            <h1 style="color: #2c3f64;">Welcome to Marasparkle</h1>
+            <p style="color: #2c3f64;">Your trusted partner for a cleaner, healthier home.</p>
+        </div>
+    </div>
+    
+<!-- Featured Section -->
+<div class="featured section">
+    <div class="container">
+        <div class="row" style="margin-left: 0; margin-right: 0; margin-bottom: 10px;">
+            <div class="col-lg-4 mb-3" style="padding-left: 0;padding-right: 0;">
+                <div class="left-image">
+                    <img src="{% static 'images/pexl.jpg' %}" alt="" style="width:10%; margin:0; border-radius:6px;">
+                    <a href="{% url 'services_details' %}">
+                        <img src="{% static 'assets/images/housekeeping.png' %}" alt="" style="max-width: 30px; padding: 0px;">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <div class="section-heading">
+                    <h6>| Marasparkle</h6>
+                    <h2><span class="text-hazards" style="color:white;">Spark &amp; Glow</span></h2>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-5">
+                <div class="h-infor">
+                    <h3 style="color:white;">| Why Us</h3>
+                    <h4 style="color:white; margin-top:20px;">Our team consists of professional cleaners who focus on delivering exceptional, 
+                        <span style="--i:4;" data-text="satisfying results."> satisfying results.</span>
+                        <span style="--i:3;" data-text="outstanding service.">outstanding service.</span>
+                        <span style="--i:2;" data-text="high-quality standards."> high-quality standards. </span>
+                        <span style="--i:1;" data-text="customer-centric solutions."> customer-centric solutions.</span>
+                        </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+         
+<!-- Slide text -->         
+<section class="container-fluid mt-5">
+           
+    </div>
+    <div class="row" style="overflow: hidden;">
+    <div class="col-lg-6">
+        <img src="{% static 'images/kitchen.jpg' %}" alt="" style="width: 70%; height: 70vh; object-fit: cover; border-radius: 6px;">
+    </div>
+        <div class="col-lg-4 offset-lg-1 p-2"> 
+            <div class="overlay-text">
+                <h2 id="slide-text" style="color: #2c3f64; white-space: normal;margin-top:10px;">Spark and Glow Your Home With Marasparkle<br><span>Residential Cleaning Services</span></h2>
+            </div>
+            <div class="btn-box" style="margin-top: 20px;">
+                <div class="bk-btn">
+                    <div class="btn-item">
+                        <a href="{% url 'login'%}" class="btn">BookNow</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+     
+</section>
+
+
+  
+<br>
+<br>
+
+<div class="row mt-5" style="overflow: hidden;">
+    <div class="col-12 text-center">
+        <h2 style="color:#2c3f64;"> Our Services</h2>
+    </div>
+
+    <div id="servicesCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; background-color:rgba(255, 255, 255, 0.3);">
+                            <i class="fas fa-home fa-5x" style="padding: 20px; color:#2c3f64;"></i>
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: 'Roboto', sans-serif; color:#2c3f64;">House Cleaning</h5>
+                                <p class="card-text" style="color:#2c3f64;">Live in a Sparkling Environment <br>
+                                    <span>with Marasparkle.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; background-color:rgba(255, 255, 255, 0.3);">
+                            <i class="fas fa-briefcase fa-5x" style="padding: 20px; color:#2c3f64;"></i>
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: 'Roboto', sans-serif; color:#2c3f64;">Office Cleaning</h5>
+                                <p class="card-text" style="color:#2c3f64;">To work in a glowing intuitive work <br>
+                                    <span>Environment.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; background-color:rgba(255, 255, 255, 0.3);">
+                            <i class="fas fa-broom fa-5x" style="padding: 20px; color:#2c3f64;"></i>
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: 'Roboto', sans-serif; color:#2c3f64;">Maid Placement</h5>
+                                <p class="card-text" style="color:#2c3f64;">Experience the Joy of a Clean<br>
+                                    <span>Home with Our Maid Placement Service!</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; background-color:rgba(255, 255, 255, 0.3);">
+                            <i class="fas fa-tools fa-5x" style="padding: 20px; color:#2c3f64;"></i>
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: 'Roboto', sans-serif; color:#2c3f64;">Maintenance</h5>
+                                <p class="card-text" style="color:#2c3f64;">Where Preventive Care Meets Expert<br>
+                                    <span>Maintenance!</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; background-color:rgba(255, 255, 255, 0.3);">
+                            <i class="fas fa-bed fa-5x" style="padding: 20px; color:#2c3f64;"></i>
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: 'Roboto', sans-serif; color:#2c3f64;">Airbnb</h5>
+                                <p class="card-text" style="color:#2c3f64;">Your guests deserve the best we deliver!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; background-color:rgba(255, 255, 255, 0.3);">
+                            <i class="fas fa-bed fa-5x" style="padding: 20px; color:#2c3f64;"></i>
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: 'Roboto', sans-serif; color:#2c3f64;">Hotels</h5>
+                                <p class="card-text" style="color:#2c3f64;">Pristine spaces for unforgettable stays!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+    <!-- Video Section -->
+ 
+   
+        <div class="container-fluid" 
+        style="background-image: url('{% static 'assets/images/white.jpeg' %}');
+        height:100vh; overflow: hidden; background-size: cover;
+          background-position: center; position: relative;
+           color: white;  margin-bottom: -30px; mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));">
+       
+            <div class="row mt-5">
+                <div class="col-12 mt-5 d-flex justify-content-center ">
+                    <div class="section-heading text-center">
+                        <h5 style="color:rgba(46, 55, 231, 0.9); padding-top:200px;">Navigate to our facebook page for more Sparkling videos.</h5>
+                        <h2 style="color:rgba(43, 82, 237, 0.9); padding-top:50px;">Connect with Marasparkle & Live Differently</h2>
+                    </div>
+                   
+                </div>
+                <div class="col-12 mt-5 d-flex justify-content-center">
+                    <div class="video-frame"> 
+                        <a href="https://www.facebook.com/profile.php?id=61573551016908" target="_blank"><i class="fa fa-play fa-3x" style="color:rgba(43, 82, 237, 0.9) ; margin-top:50px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Fun Facts Section -->
+    <div class="fun-facts">
+        <div class="container-fluid" >
+                <div class="col-lg-12">
+                    <div class="wrapper">
+                        <div class="row">
+                            <div class="col-lg-4 mt-4">
+                                <div class="counter">
+                                    <h2 class="timer count-title count-number" data-to="34" data-speed="1000"></h2>
+                                    <p class="count-text">Environment Friendly <br>Chemicals</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4  mt-4">
+                                <div class="counter">
+                                    <h2 class="timer count-title count-number" data-to="12" data-speed="1000"></h2>
+                                    <p class="count-text">Years<br>Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4  mt-4">
+                                <div class="counter">
+                                    <h2 class="timer count-title count-number" data-to="24" data-speed="1000"></h2>
+                                    <p class="count-text">To a cleaner <br>and better future.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+<div class="container-fluid" style="background-color:white">
+    <br>
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1 text-center">
+            <div style="padding-top: 3px; padding-bottom: 1px;">
+                <h1><span style="color:#2c3f64;">Intuitive and Replenishing Touch With Marasparkle</span></h1>
+            </div>
+        </div>
+    </div>
+
+  
+
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; height:63vh; border:none; background-color:white;">
+                            <img src="{% static 'images/chairs.jpg' %}" class="card-img-top" alt="Restorative Touch-Up">
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; height:63vh; border:none; background-color:#2c3f64;">
+                            <img src="{% static 'images/fridge.jpg' %}" class="card-img-top" alt="Rejuvenating Clean">
+                            <div class="card-body">
+        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%;  height:63vh;border:none; background-color:#2c3f64;">
+                            <img src="{% static 'images/castro.jpg' %}" class="card-img-top" alt="Refreshed Finish">
+                            <div class="card-body">
+            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; height:63vh; border:none; background-color:#2c3f64;">
+                            <img src="{% static 'images/airbnb.jpg' %}" class="card-img-top" alt="Refreshing Shine">
+                            <div class="card-body">
+        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color:#2c3f64;">Intuitive Touch</h5>
+                                <p class="card-text" style="color:#2c3f64;">Experience the intuitive touch of Marasparkle that brings a new level of cleanliness to your home.</p>
+                                <p class="card-text" style="color:#2c3f64;">Our team is dedicated to providing a rejuvenating clean that revitalizes your space.</p>
+                            </div>
+                        </div>
+                        
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%;  height:63vh;border:none; background-color:#2c3f64;">
+                            <img src="{% static 'images/castro.jpg' %}" class="card-img-top" alt="Refreshed Finish">
+                            <div class="card-body">
+            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 100%; height:63vh; border:none; background-color:#2c3f64;">
+                            <img src="{% static 'images/airbnb.jpg' %}" class="card-img-top" alt="Refreshing Shine">
+                            <div class="card-body">
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#2c3f64;">Refreshed Finish</h5>
+                            <p class="card-text" style="color:#2c3f64;">Experience the intuitive touch of Marasparkle that brings a new level of cleanliness to your home.</p>
+                            <p class="card-text" style="color:#2c3f64;">Trust Marasparkle for a refreshed finish that transforms your space into a pristine environment.</p>
+                        </div>
+                    </div>
+            </div>
+            
+     
+        </div>
+   
+    <!-- Contact Section -->
+    <div class="contact section">
+        <div class="container-fluid  d-flex justify-content-center align-items-center" style="background-color:#2c3f64;">
+            <div class="row">
+                <div class="col ">
+                    <div class="section-heading text-center">
+                        <h6 style="color:rgba(255, 255, 255, 0.9); padding-top: 30px;">Get in touch</h6>
+                        <h2 style="color:rgba(255, 255, 255, 0.9);">Get In Touch With Us Today</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <footer class="footer text-center" style="background-color: rgba(255, 255, 255, 0.3); padding: 20px 0;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-1 text-dark">© 2025 Marasparkle Company.</p>
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="sub-header  text-dark py-3" style="  background-color:rgb(255, 255, 255);">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-8 col-sm-12 text-center text-md-left mb-3 mb-md-0">
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-1">
+                            <i class="fa fa-envelope mr-2"></i>
+                            <span>maracomfy@gmail.com</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="fa fa-map mr-2"></i>
+                            <span>No 6594 Bingley Road, Maranatha, Harare</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center text-md-right">
+                    <ul class="list-unstyled d-flex justify-content-center justify-content-md-end mb-0">
+                        <li class="mr-3">
+                            <a href="https://www.facebook.com/profile.php?id=61573551016908" class="text-dark" aria-label="Facebook">
+                                <i class="fab fa-facebook fa-lg"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com" class="text-dark" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}{% endblock %}
+    
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.js' %}"></script>
+    <script src="{% static 'assets/js/animation.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+        const texts = [
+            "Spark and Glow Your Home With Marasparkle<br><span>Residential Cleaning Services</span>",
+            "Experience the Best in Home Cleaning<br><span>Professional Services for Every Need</span>",
+            "Transform Your Home into a Sparkling Oasis<br><span>Reliable and Efficient Cleaning Solutions</span>",
+            "Make Every Corner Shine with Marasparkle<br><span>Your Satisfaction is Our Priority</span>",
+        ];
+    
+        let currentIndex = 0;
+    
+        function changeText() {
+            currentIndex = (currentIndex + 1) % texts.length; // Cycle through the texts
+            document.getElementById('slide-text').innerHTML = texts[currentIndex];
+        }
+    
+        // Change text every 3 seconds
+        setInterval(changeText, 5000);
+    </script>
+
+ 
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
