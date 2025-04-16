@@ -1,101 +1,82 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>{% block title %}Marasparkle{% endblock %}</title>
-
-     <!-- Font Awesome CDN -->
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!--Google fomts-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
     <style>
-        body{
-            background-color:rgb(255, 255, 255);
-            overflow-x: hidden;
-    
-          }
-    </style>
+        background-color:white;
+        </style>
 
+    <title>Services</title>
 </head>
-
 <body>
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
 
-
-
-    <!-- ***** Header Area Start ***** -->
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgb(129, 132, 141);">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'icons/Maralog.png' %}" style="width:70px;">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgba(50, 51, 52, 0.3);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'services_details' %}">
+                <img src="{% static 'icons/Maralog.png' %}" style="width:70px;" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" style="color:white;"></span>
             </button>
         
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul  class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}" style="color:#2c3f64;">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'services_details' %}" style="color:#2c3f64;" >Services</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'services_details' %}" style="color:red;">Services</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}" style="color:#2c3f64;">Contact Us</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'about' %}" style="color:red;">About Us</a>
+                        <a class="nav-link" href="{% url 'about' %}" style="color:#2c3f64;">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}" style="color:#2c3f64;"><i class="fas fa-calendar" style="background-color: rgb(255, 255, 255);"></i>BookNow</a>
+                        <a class="nav-link" href="{% url 'login' %}" style="color:#2c3f64;">
+                            <i class="fas fa-calendar" style="background-color: rgb(255, 255, 255);"></i>BookNow
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
-        </nav>
-   
-    <!-- ***** Header Area End ***** -->
+    </nav>
 
-      <!-- ***** About Section Start ***** -->
-      <div class="container mt-5 text-white">
-        <h2 class="text-center mb-4" style="color:#2c3f64;">About Marasparkle</h2>
-        <p style="color:white;">Your clean space is our business! Founded in 2024, Marasparkle offers a range of professional cleaning services designed to meet the needs of both households and businesses.</p>
-        
-        <h3 style="color:#2c3f64;">Our Services</h3>
-        <ul>
-            <li style="color:#2c3f64;"><strong>House Cleaning:</strong> Enjoy a sparkling clean home with our comprehensive cleaning services that ensure every corner is spotless.</li>
-            <li style="color:#2c3f64;"><strong>Office Cleaning:</strong> Create a welcoming and productive work environment with our expert office cleaning services.</li>
-            <li style="color:#2c3f64;"><strong>Maid Placement:</strong> Connect with highly vetted professionals who can provide cleaning support tailored to your needs.</li>
-            <li style="color:#2c3f64;"><strong>Maintenance Services:</strong> We offer maintenance solutions to keep your home or office in top shape year-round.</li>
-        </ul>
+    <div class="container mt-5 " style="color:#2c3f64;">
+        <h1 class="text-center">Our Cleaning Services</h1>
 
-        <p style="color:#2c3f64;">At Marasparkle, our mission is to provide top-notch cleaning solutions that promote health, hygiene, and happiness in every space.</p>
-     </div>
-    <!-- ***** About Section End ***** -->
+        <section class="my-5">
+            <h2>Office Cleaning</h2>
+            <p>Our professional office cleaning services are designed to create a clean and welcoming workspace for you and your employees. We provide customizable cleaning plans that fit your needs, whether it’s daily, weekly, or monthly cleaning. Our trained staff pays special attention to high-touch areas to ensure cleanliness and hygiene. We use eco-friendly products to create a healthy environment for your team.</p>
+        </section>
 
+        <section class="my-5">
+            <h2>Home Cleaning</h2>
+            <p>Experience the joy of a sparkling clean home without lifting a finger! Our home cleaning services are tailored to fit your lifestyle, whether you need a one-time deep cleaning or regular maintenance. Our team of skilled cleaners will dust, vacuum, scrub, and sanitize your home from top to bottom, ensuring a freshness you can see and feel. We offer flexible scheduling and eco-friendly cleaning products that protect your home and environment.</p>
+        </section>
+
+        <section class="my-5">
+            <h2>Maid Placement</h2>
+            <p>Finding the right maid can be a challenging task. At Marasparkle, we simplify the process by matching you with a qualified maid who meets your specific requirements. Each maid is thoroughly vetted, and trained ensuring peace of mind while they care for your home. Whether you need part-time or full-time assistance, we take the hassle out of managing household tasks, letting you focus on what matters most.</p>
+        </section>
+
+        <section class="my-5">
+            <h2>Maintenance Services</h2>
+            <p>In addition to our cleaning services, we offer maintenance services that keep your home and office running smoothly. From regular upkeep tasks like lawn care to repairs and installations, our professional team is equipped to handle a variety of maintenance needs. Regular maintenance can enhance the longevity of your property and ensure your environment remains safe and functional.</p>
+        </section>
+    </div>
 
     <footer class="footer text-center" style="background-color: rgba(255, 255, 255, 0.3); padding: 20px 0;">
         <div class="container-fluid">
@@ -140,11 +121,10 @@
             </div>
         </div>
     </div>
- 
+
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-
 </html>
