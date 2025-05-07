@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
-
+from decouple import config, Csv
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-1=%vxc^p@8r36(t+2-vl3xx^el1+acxj*_6gsd0=u7k%ri%r*v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.98', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.1.98', '127.0.0.1','marasparkle.co.zw']
 
 
 # Application definition
@@ -74,12 +75,19 @@ WSGI_APPLICATION = 'marasparkleweb.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+"""""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+"""""
+
+DATABASE_URL= config('DATABASE_URL', default='sqlite:///db.sqlite3')
+
+DATABASES = {
+    'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600,)
 }
 
 
