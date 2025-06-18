@@ -21,11 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
+SECRET_KEY = 'django-insecure-1=%vxc^p@8r36(t+2-vl3xx^el1+acxj*_6gsd0=u7k%ri%r*v'
 
-
-
+"""""
 SECRET_KEY = os.environ.get('SECRET_KEY')
-
+"""""
 
 if not SECRET_KEY:
     raise ValueError("SECRET_KEY environment variable not set!")
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'marasparkleweb.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-"""""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -90,13 +90,17 @@ DATABASES = {
 }
 """""
 
-DATABASE_URL= config('DATABASE_URL', default='sqlite:///db.sqlite3')
-
 DATABASES = {
-    'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600,)
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('DB_NAME'),        
+        'USER': os.environ.get('DB_USER'),      
+        'PASSWORD':os.environ.get('DB_PASSWORD'),   
+        'HOST': 'localhost',                   
+        'PORT': '3306',                        
+    }
 }
-
-
+"""""
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -121,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Harare'
 
 USE_I18N = True
 
@@ -131,7 +135,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static", 
 ]
