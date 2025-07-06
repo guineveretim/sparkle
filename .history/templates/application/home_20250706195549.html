@@ -56,6 +56,38 @@
         }
 
         
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icon and text */
+    z-index: 1000;
+    background: transparent; /* optional, if you want background */
+}
+
+.whatsapp-float {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5e;
+    text-decoration: none;
+}
+
+
+
+        
     </style>
 
 </head>
@@ -358,86 +390,6 @@
     <br>
 
 
-<div class="container-fluid" style="background-color:white">
-    <br>
-    <div class="row">
-        <div class="col-lg-10 offset-lg-1 text-center">
-            <div style="padding-top: 3px; padding-bottom: 1px;">
-                <h1><span style="color:#2c3f64;">Intuitive and Replenishing Touch With Marasparkle</span></h1>
-            </div>
-        </div>
-    </div>
-
-  
-
-                
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
-                        <div class="card" style="width: 100%; height:63vh; border:none; background-color:white;">
-                            <img src="{% static 'images/4.jpg' %}" class="card-img-top" alt="Restorative Touch-Up">
-                            <div class="card-body">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
-                        <div class="card" style="width: 100%; height:63vh; border:none; background-color:white;">
-                            <img src="{% static 'images/5.jpg' %}" class="card-img-top" alt="Rejuvenating Clean">
-                            <div class="card-body">
-        
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
-                        <div class="card" style="width: 100%;  height:63vh; border:none; background-color:white;">
-                            <img src="{% static 'images/6.jpg' %}" class="card-img-top" alt="Refreshed Finish">
-                            <div class="card-body">
-            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 mb-3 d-flex justify-content-center">
-                        <div class="card" style="width: 100%; height:63vh; border:none; background-color:white;">
-                            <img src="{% static 'images/3.jpg' %}" class="card-img-top" alt="Refreshing Shine">
-                            <div class="card-body">
-        
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color:#2c3f64;">Intuitive Touch</h5>
-                                <p class="card-text" style="color:#2c3f64;">Experience the intuitive touch of Marasparkle that brings a new level of cleanliness to your home.</p>
-                                <p class="card-text" style="color:#2c3f64;">Our team is dedicated to providing a rejuvenating clean that revitalizes your space.</p>
-                            </div>
-                        </div>
-                        
-                </div>
-
-                
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
-                        <div class="card" style="width: 100%;  height:63vh;border:none; background-color:white;">
-                            <img src="{% static 'icons/high-five.png' %}" class="card-img-top" alt="Refreshed Finish">
-                            <div class="card-body">
-            
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="col-lg-8 col-md-6 col-sm-12 mb-3 " style="background-color:#2c3f64; border-radius: 10px; box-shadow: 0 6px 10px rgba(27, 21, 21, 0.8);">  
-                        <div class="card-body text-center " style="margin-top: 70px;">
-                            <h5 class="card-title" style="color:white;">Refreshed Finish</h5>
-                            <p class="card-text" style="color:white;">Experience the intuitive touch of Marasparkle that brings a new level of cleanliness to your home.</p>
-                            <p class="card-text" style="color:white;">Trust Marasparkle for a refreshed finish that transforms your space into a pristine environment.</p>
-                        </div>
-                    </div>
-            </div>
-            
-     
-        </div>
-   
     <!-- Contact Section -->
     <div class="contact section">
         <div class="container-fluid  d-flex justify-content-center align-items-center" style="background-color:#2c3f64;">
@@ -471,7 +423,7 @@
                     <ul class="list-unstyled">
                         <li class="d-flex align-items-center mb-1">
                             <i class="fa fa-envelope mr-2"></i>
-                            <span>maracomfy@gmail.com</span>
+                            <span>info@marasparkle.co.zw</span>
                         </li>
                         <li class="d-flex align-items-center">
                             <i class="fa fa-map mr-2"></i>
@@ -497,6 +449,13 @@
         </div>
     </div>
 
+       <!--WhatsApp-->
+<div class="whatsapp-container">
+    <a href="https://wa.me/+27784487423" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <span class="whatsapp-text" style="color:white;">Chat with us on WhatsApp!</span>
+</div>
     {% block content %}{% endblock %}
     
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

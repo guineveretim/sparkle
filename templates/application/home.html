@@ -56,6 +56,38 @@
         }
 
         
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icon and text */
+    z-index: 1000;
+    background: transparent; /* optional, if you want background */
+}
+
+.whatsapp-float {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5e;
+    text-decoration: none;
+}
+
+
+
+        
     </style>
 
 </head>
@@ -417,6 +449,13 @@
         </div>
     </div>
 
+       <!--WhatsApp-->
+<div class="whatsapp-container">
+    <a href="https://wa.me/+27784487423" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <span class="whatsapp-text" style="color:white;">Chat with us on WhatsApp!</span>
+</div>
     {% block content %}{% endblock %}
     
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
