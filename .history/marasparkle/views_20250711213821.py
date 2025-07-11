@@ -24,9 +24,7 @@ def home(request):
   return render(request, 'application/home.html')
 
 
-
-
-def Service(request):
+def Home(request):
     # Fetch testimonials to display
     testimonials = Testimonial.objects.order_by('-created_at')  # latest first
 
@@ -35,7 +33,7 @@ def Service(request):
         form = TestimonialForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('services_details')  # Redirect to refresh page and show new testimonial
+            return redirect('home')  # Redirect to refresh page and show new testimonial
     else:
         form = TestimonialForm()
 
@@ -43,7 +41,10 @@ def Service(request):
         'testimonials': testimonials,
         'form': form,
     }
-    return render(request, 'application/services.html', context)
+    return render(request, 'application/home.html', context)
+
+def Service(request):
+    return render(request, 'application/services.html')
 
 
 def contact(request):

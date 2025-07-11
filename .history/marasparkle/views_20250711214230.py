@@ -25,6 +25,9 @@ def home(request):
 
 
 
+def Service(request):
+    return render(request, 'application/services.html')
+
 
 def Service(request):
     # Fetch testimonials to display
@@ -35,7 +38,7 @@ def Service(request):
         form = TestimonialForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('services_details')  # Redirect to refresh page and show new testimonial
+            return redirect('home')  # Redirect to refresh page and show new testimonial
     else:
         form = TestimonialForm()
 
